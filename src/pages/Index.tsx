@@ -9,55 +9,71 @@ import Icon from '@/components/ui/icon';
 const products = [
   {
     id: 1,
-    name: 'Офисная мебель',
-    category: 'Офис',
-    description: 'Качественная мебель для офисных помещений',
-    price: 'от 15 000 ₽',
+    name: 'Экскаваторы-погрузчики',
+    category: 'Спецтехника',
+    description: 'Универсальная техника для земляных работ',
+    price: 'от 2 500 000 ₽',
     inStock: true
   },
   {
     id: 2,
-    name: 'Компьютерная техника',
-    category: 'Техника',
-    description: 'Современное оборудование для бизнеса',
-    price: 'от 25 000 ₽',
+    name: 'Тракторы МТЗ',
+    category: 'Сельхозтехника',
+    description: 'Надежные тракторы для сельского хозяйства',
+    price: 'от 1 800 000 ₽',
     inStock: true
   },
   {
     id: 3,
-    name: 'Расходные материалы',
-    category: 'Материалы',
-    description: 'Бумага, картриджи и канцелярия',
-    price: 'от 500 ₽',
+    name: 'Бульдозеры',
+    category: 'Спецтехника',
+    description: 'Мощная техника для планировочных работ',
+    price: 'от 4 200 000 ₽',
     inStock: true
   },
   {
     id: 4,
-    name: 'Системы хранения',
-    category: 'Офис',
-    description: 'Шкафы, стеллажи и архивные системы',
-    price: 'от 8 000 ₽',
+    name: 'Комбайны зерноуборочные',
+    category: 'Сельхозтехника',
+    description: 'Производительная уборочная техника',
+    price: 'от 6 500 000 ₽',
     inStock: true
   },
   {
     id: 5,
-    name: 'Сетевое оборудование',
-    category: 'Техника',
-    description: 'Роутеры, коммутаторы, кабели',
-    price: 'от 3 500 ₽',
+    name: 'Погрузчики фронтальные',
+    category: 'Спецтехника',
+    description: 'Эффективное решение для погрузочных работ',
+    price: 'от 3 800 000 ₽',
     inStock: false
   },
   {
     id: 6,
-    name: 'Офисная электроника',
-    category: 'Техника',
-    description: 'Принтеры, сканеры, МФУ',
-    price: 'от 12 000 ₽',
+    name: 'Культиваторы',
+    category: 'Сельхозтехника',
+    description: 'Техника для обработки почвы',
+    price: 'от 450 000 ₽',
+    inStock: true
+  },
+  {
+    id: 7,
+    name: 'Автогрейдеры',
+    category: 'Спецтехника',
+    description: 'Профессиональное дорожное оборудование',
+    price: 'от 5 200 000 ₽',
+    inStock: true
+  },
+  {
+    id: 8,
+    name: 'Сеялки',
+    category: 'Сельхозтехника',
+    description: 'Точный высев семян различных культур',
+    price: 'от 780 000 ₽',
     inStock: true
   }
 ];
 
-const categories = ['Все', 'Офис', 'Техника', 'Материалы'];
+const categories = ['Все', 'Спецтехника', 'Сельхозтехника'];
 
 export default function Index() {
   const [selectedCategory, setSelectedCategory] = useState('Все');
@@ -83,7 +99,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
-              <Icon name="Package" size={28} className="text-accent" />
+              <Icon name="Truck" size={28} className="text-accent" />
               <span className="text-xl font-bold text-primary">ЛЕНОКС</span>
             </div>
             <nav className="hidden md:flex items-center gap-8">
@@ -105,11 +121,11 @@ export default function Index() {
           <div className="max-w-3xl">
             <Badge className="mb-4">Надежный партнер с 2010 года</Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-primary">
-              Комплексные поставки для вашего бизнеса
+              Поставки спецтехники и сельхозмашин
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
-              Широкий ассортимент товаров для офиса и производства. 
-              Индивидуальный подход к каждому клиенту и выгодные условия сотрудничества.
+              Полный ассортимент специализированной техники для строительства и сельского хозяйства. 
+              Профессиональный сервис, гарантия качества и выгодные условия.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="gap-2">
@@ -130,7 +146,7 @@ export default function Index() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">О компании</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Мы специализируемся на комплексном обеспечении предприятий всем необходимым
+              Официальный дилер производителей спецтехники и сельхозмашин
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -151,9 +167,9 @@ export default function Index() {
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
                   <Icon name="Users" size={24} className="text-accent" />
                 </div>
-                <CardTitle>500+ клиентов</CardTitle>
+                <CardTitle>300+ единиц техники</CardTitle>
                 <CardDescription>
-                  Доверяют нам свои поставки
+                  Поставлено за последний год
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -163,9 +179,9 @@ export default function Index() {
                 <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
                   <Icon name="Truck" size={24} className="text-accent" />
                 </div>
-                <CardTitle>Доставка 24/7</CardTitle>
+                <CardTitle>Сервис и запчасти</CardTitle>
                 <CardDescription>
-                  По всей России в удобное время
+                  Полное сервисное обслуживание
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -334,7 +350,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <Icon name="Package" size={24} className="text-accent" />
+              <Icon name="Truck" size={24} className="text-accent" />
               <span className="font-bold text-primary">ЛЕНОКС</span>
             </div>
             <p className="text-sm text-muted-foreground">
