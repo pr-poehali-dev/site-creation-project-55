@@ -84,7 +84,7 @@ export default function Index() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
               <Icon name="Package" size={28} className="text-accent" />
-              <span className="text-xl font-bold text-primary">ТоргКомпания</span>
+              <span className="text-xl font-bold text-primary">ЛЕНОКС</span>
             </div>
             <nav className="hidden md:flex items-center gap-8">
               <a href="#home" className="text-sm font-medium hover:text-accent transition-colors">Главная</a>
@@ -263,7 +263,7 @@ export default function Index() {
                     <Icon name="Mail" size={20} className="text-accent mt-1" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-muted-foreground">info@торгкомпания.рф</p>
+                      <p className="text-muted-foreground">info@lenoks.ru</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -335,10 +335,10 @@ export default function Index() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <Icon name="Package" size={24} className="text-accent" />
-              <span className="font-bold text-primary">ТоргКомпания</span>
+              <span className="font-bold text-primary">ЛЕНОКС</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2024 ТоргКомпания. Все права защищены.
+              © 2024 ЛЕНОКС. Все права защищены.
             </p>
             <div className="flex gap-4">
               <Button variant="ghost" size="icon">
